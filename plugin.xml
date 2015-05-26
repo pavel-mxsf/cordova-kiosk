@@ -1,2 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="eu.codepoint.kiosk" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"><name>cordova-kiosk</name><description>Cordova kiosk mode plugin</description><js-module name="cordova-kiosk" src="www/cordova-kiosk.js"><clobbers target="cordova.plugins.cordova-kiosk" /></js-module><platform name="android"><config-file parent="/*" target="res/xml/config.xml"><feature name="cordova-kiosk"><param name="android-package" value="eu.codepoint.kiosk.cordova-kiosk" /></feature></config-file><config-file parent="/*" target="AndroidManifest.xml"></config-file><source-file src="src/android/cordova-kiosk.java" target-dir="src/eu/codepoint/kiosk/cordova-kiosk" /></platform></plugin>
+<plugin id="eu.codepoint.kiosk" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-kiosk</name>
+    <description>Cordova kiosk mode plugin</description>
+    <js-module name="cordova-kiosk" src="www/cordova-kiosk.js">
+        <clobbers target="cordova.plugins.cordovaKiosk"/>
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="cordova-kiosk">
+                <param name="android-package" value="eu.codepoint.kiosk.cordovaKiosk"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/cordova-kiosk.java" target-dir="src/eu/codepoint/kiosk/cordova-kiosk"/>
+    </platform>
+</plugin>

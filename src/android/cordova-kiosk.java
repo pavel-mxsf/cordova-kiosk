@@ -12,7 +12,7 @@ import java.lang.Runtime;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class CDVcordova-kiosk extends CordovaPlugin{
+public class cordovaKiosk extends CordovaPlugin{
 
 @Override
 public boolean execute(String action,JSONArray args,CallbackContext callbackContext)throws JSONException{
