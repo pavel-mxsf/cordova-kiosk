@@ -32,8 +32,10 @@ private void hideBars(CallbackContext callbackContext){
 
         try
         {
-        Process proc=Runtime.getRuntime().exec(new String[]{"su","-c","service call activity 42 s16 com.android.systemui"});
-        proc.waitFor();
+        String command;
+               command = "LD_LIBRARY_PATH=/vendor/lib:/system/lib service call activity 42 s16 com.android.systemui";
+               Process proc = Runtime.getRuntime().exec(new String[] { "su", "-c", command }, envp);
+               proc.waitFor();
         callbackContext.success("ok");
         }
         catch(Exception ex)
@@ -48,9 +50,9 @@ private void showBars(CallbackContext callbackContext){
         try
                 {
                String command;
-                      command = "LD_LIBRARY_PATH=/vendor/lib:/system/lib am startservice -n com.android.systemui/.SystemUIService";
-                      String[] envp = null;
-                      Process proc = Runtime.getRuntime().exec(new String[] { "su", "-c", command }, envp);
+                       command = "LD_LIBRARY_PATH=/vendor/lib:/system/lib am startservice -n com.android.systemui/.SystemUIService";
+                       Process proc = Runtime.getRuntime().exec(new String[] { "su", "-c", command }, envp);
+                       proc.waitFor();
                       callbackContext.success("ok");
                 }
                 catch(Exception ex)
