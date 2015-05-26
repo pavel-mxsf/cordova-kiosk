@@ -17,7 +17,7 @@ public class cordovaKiosk extends CordovaPlugin {
 public boolean execute(String action,JSONArray args,CallbackContext callbackContext)throws JSONException{
         if(action.equals("hideBars")){
 
-                this.showBars(callbackContext);
+                this.hideBars(callbackContext);
                 return true;
         }
         if(action.equals("showBars")){
