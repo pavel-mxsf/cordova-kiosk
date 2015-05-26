@@ -39,7 +39,7 @@ private void hideBars(String message,CallbackContext callbackContext){
         catch(Exception ex)
         {
 
-        Log.e("ROOT ERROR",ex.getMessage());
+        Log.e("ROOTERROR",ex.getMessage());
         callbackContext.error("Root needed");
         }
         }
@@ -56,7 +56,7 @@ private void showBars(String message,CallbackContext callbackContext){
                 catch(Exception ex)
                 {
 
-                Log.e("ROOT ERROR",ex.getMessage());
+                Log.e("ROOTERROR",ex.getMessage());
                 callbackContext.error("Root needed");
                 }
         }
