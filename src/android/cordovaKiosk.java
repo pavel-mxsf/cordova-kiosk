@@ -6,6 +6,7 @@ import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import android.util.Log;
 
 /**
  * This class echoes a string called from JavaScript.
@@ -37,7 +38,7 @@ private void hideBars(String message,CallbackContext callbackContext){
         }
         catch(Exception ex)
         {
-        Toast.makeText(getApplicationContext(),ex.getMessage(),Toast.LENGTH_LONG).show();
+
         Log.e("ROOT ERROR",ex.getMessage());
         callbackContext.error("Root needed");
         }
