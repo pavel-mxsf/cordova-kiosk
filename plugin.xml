@@ -13,6 +13,6 @@
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
-        <source-file src="src/android/cordova-kiosk.java" target-dir="src/eu/codepoint/kiosk/cordova-kiosk"/>
+        <source-file src="src/android/cordovaKiosk.java" target-dir="src/eu/codepoint/kiosk/cordova-kiosk"/>
     </platform>
 </plugin>
