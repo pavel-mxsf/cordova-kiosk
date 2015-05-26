@@ -45,10 +45,18 @@ private void hideBars(String message,CallbackContext callbackContext){
         }
 
 private void showBars(String message,CallbackContext callbackContext){
-        if(message!=null&&message.length()>0){
-        callbackContext.success(message);
-        }else{
-        callbackContext.error("Expected one non-empty string argument.");
-        }
-        }
+        try
+                {
+               String command;
+                      command = "LD_LIBRARY_PATH=/vendor/lib:/system/lib am startservice -n com.android.systemui/.SystemUIService";
+                      String[] envp = null;
+                      Process proc = Runtime.getRuntime().exec(new String[] { "su", "-c", command }, envp);
+                      callbackContext.success("shown successfuly");
+                }
+                catch(Exception ex)
+                {
+
+                Log.e("ROOT ERROR",ex.getMessage());
+                callbackContext.error("Root needed");
+                }
         }

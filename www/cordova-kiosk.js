@@ -5,11 +5,11 @@ cordova.define("kiosk", function (require, exports, module) {
 
     };
 
-    Kiosk.prototype.hideBars = function () {
+    Kiosk.prototype.hideBars = function (success, error) {
         exec(success, error, "cordovaKiosk", "hideBars", []);
     };
 
-    Kiosk.prototype.showBars = function () {
+    Kiosk.prototype.showBars = function (success, error) {
         exec(success, error, "cordovaKiosk", "showBars", []);
     };
 
