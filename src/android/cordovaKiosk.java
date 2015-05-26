@@ -60,3 +60,4 @@ private void showBars(String message,CallbackContext callbackContext){
                 callbackContext.error("Root needed");
                 }
         }
+}
