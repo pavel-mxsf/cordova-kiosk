@@ -34,13 +34,13 @@ private void hideBars(String message,CallbackContext callbackContext){
         {
         Process proc=Runtime.getRuntime().exec(new String[]{"su","-c","service call activity 42 s16 com.android.systemui"});
         proc.waitFor();
-        callbackContext.success("hiden successfuly");
+        callbackContext.success();
         }
         catch(Exception ex)
         {
 
         Log.e("ROOTERROR",ex.getMessage());
-        callbackContext.error("Root needed");
+        callbackContext.error();
         }
         }
 
@@ -51,13 +51,13 @@ private void showBars(String message,CallbackContext callbackContext){
                       command = "LD_LIBRARY_PATH=/vendor/lib:/system/lib am startservice -n com.android.systemui/.SystemUIService";
                       String[] envp = null;
                       Process proc = Runtime.getRuntime().exec(new String[] { "su", "-c", command }, envp);
-                      callbackContext.success("shown successfuly");
+                      callbackContext.success();
                 }
                 catch(Exception ex)
                 {
 
                 Log.e("ROOTERROR",ex.getMessage());
-                callbackContext.error("Root needed");
+                callbackContext.error();
                 }
         }
 }
