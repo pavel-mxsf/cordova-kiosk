@@ -16,19 +16,19 @@ public class cordovaKiosk extends CordovaPlugin {
 @Override
 public boolean execute(String action,JSONArray args,CallbackContext callbackContext)throws JSONException{
         if(action.equals("hideBars")){
-                String message=args.getString(0);
-                this.showBars(message,callbackContext);
+
+                this.showBars(callbackContext);
                 return true;
         }
         if(action.equals("showBars")){
-                String message=args.getString(0);
-                this.showBars(message,callbackContext);
+
+                this.showBars(callbackContext);
                 return true;
         }
         return false;
         }
 
-private void hideBars(String message,CallbackContext callbackContext){
+private void hideBars(CallbackContext callbackContext){
 
         try
         {
@@ -44,7 +44,7 @@ private void hideBars(String message,CallbackContext callbackContext){
         }
         }
 
-private void showBars(String message,CallbackContext callbackContext){
+private void showBars(CallbackContext callbackContext){
         try
                 {
                String command;
